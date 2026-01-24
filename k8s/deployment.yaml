@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agriculture-app
+spec:
+  replicas: 2 # Scenario 4 dagi Seasonal Demand uchun kerak
+  selector:
+    matchLabels:
+      app: agriculture-app
+  template:
+    metadata:
+      labels:
+        app: agriculture-app
+    spec:
+      containers:
+      - name: agriculture-app
+        image: <sizning-dockerhub-useringiz>/agriculture-app:latest # CI pipeline yaratgan image
+        ports:
+        - containerPort: 5000
+        - containerPort: 8000 # Metrikalar porti
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: agriculture-service
+spec:
+  selector:
+    app: agriculture-app
+  ports:
+    - name: http
+      port: 80
+      targetPort: 5000
+    - name: metrics
+      port: 8000
+      targetPort: 8000
