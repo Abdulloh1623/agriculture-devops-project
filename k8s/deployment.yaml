@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: agriculture-app
-        image: Abdulloh1623/agriculture-app:latest # CI pipeline yaratgan image
+        image: abdulloh1623/agriculture-app:latest # CI pipeline yaratgan image
         ports:
         - containerPort: 5000
         - containerPort: 8000 # Metrikalar porti
