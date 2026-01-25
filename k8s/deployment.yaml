@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: agriculture-app
-        image: your-docker-username/agriculture-app:latest
+        image: abuseven/agriculture-app:latest
         ports:
         - containerPort: 5000
