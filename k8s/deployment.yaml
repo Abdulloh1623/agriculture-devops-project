@@ -2,8 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: agriculture-app
+  labels:
+    app: agriculture-app
 spec:
-  replicas: 2 # Ssenariy 4 dagi Seasonal Demand uchun kerak
+  replicas: 2
   selector:
     matchLabels:
       app: agriculture-app
@@ -12,31 +14,11 @@ spec:
       labels:
         app: agriculture-app
       annotations:
-        # Prometheus metrikalarni o'qib olishi uchun zarur:
         prometheus.io/scrape: "true"
-        prometheus.io/port: "8000"
-        prometheus.io/path: "/metrics"
+        prometheus.io/port: "5000"
     spec:
       containers:
       - name: agriculture-app
-        # Faqat kichik harflarda yozilgan to'g'ri image nomi:
-        image: abuseven/agriculture-app:latest 
+        image: your-docker-username/agriculture-app:latest
         ports:
-        - containerPort: 5000 # Ilova porti
-        - containerPort: 8000 # Metrikalar porti
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: agriculture-service
-spec:
-  selector:
-    app: agriculture-app
-  ports:
-    - name: http
-      port: 80
-      targetPort: 5000
-    - name: metrics
-      port: 8000
-      targetPort: 8000
-  type: ClusterIP
+        - containerPort: 5000
