@@ -53,4 +53,17 @@ To better understand how these files interact within the cluster:
 * **Dashboard-as-Code:** The *Agricultural Platform* dashboard was deployed via a Kubernetes `ConfigMap`, ensuring the monitoring configuration is versioned and reproducible.
 * **Operational Readiness:** The "Welcome to Grafana" status confirms that the data sources (Prometheus and Loki) are successfully integrated and ready for real-time data visualization.
 
+<img width="2559" height="789" alt="image" src="https://github.com/user-attachments/assets/76d2b46c-b321-419b-a25c-f67cf16133d7" />
+
+### **Integrated Observability Dashboard: Executive View**
+
+> **Description:** This dashboard provides a comprehensive "single pane of glass" view into the **Agricultural Platform's** health and business operations. It integrates three critical observability dimensions: real-time business metrics, infrastructure traffic, and granular application logs.
+
+**Key Monitoring Components:**
+
+* **Business Logic Tracking (Scenario 1):** The "Products Updated Daily" panel monitors the core functional output of the microservices, tracking successful transaction completions across the cluster.
+* **Real-time Traffic Analysis:** The "Real-time System Load" time-series graph visualizes incoming HTTP request rates, allowing for immediate identification of traffic spikes or potential bottlenecks.
+* **Log Streaming (Scenario 5):** The "Application Logs" section provides a live feed of microservice activities. As shown in the view, it captures detailed HTTP status codes (e.g., 404 monitoring) and endpoint hits, which is essential for rapid debugging and security auditing.
+
+
 
