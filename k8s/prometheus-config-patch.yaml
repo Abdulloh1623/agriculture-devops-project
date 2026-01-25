@@ -1,5 +1,1 @@
-# Prometheus ConfigMap-ga qo'shiladigan qism
-scrape_configs:
-  - job_name: 'agriculture-app'
-    static_configs:
-      - targets: ['agriculture-service.default.svc.cluster.local:8000']
+
