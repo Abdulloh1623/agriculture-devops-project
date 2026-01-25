@@ -40,3 +40,17 @@ To better understand how these files interact within the cluster:
 2. **ArgoCD** pulls the manifests and applies them to **Kubernetes**.
 3. **Promtail** and **Prometheus** collect data from the running **Pods**.
 4. **Grafana** visualizes this data by querying **Loki** and **Prometheus**.
+
+<img width="2559" height="1425" alt="image" src="https://github.com/user-attachments/assets/be0d34d8-e0c7-4821-9d59-707455178e63" />
+
+### **Grafana Monitoring Hub**
+
+> **Description:** This is the primary interface of the **Grafana Observability Stack** implemented for the Agricultural Platform. The sidebar displays a comprehensive list of pre-configured and custom-built dashboards, including the **Agricultural Platform - Executive View V2**, which serves as the central command center for both business and technical metrics.
+
+**Key features visible in this view:**
+
+* **Centralized Access:** Quick navigation to infrastructure health dashboards like *Node Exporter Full* and *Kubernetes / Views / Pods*.
+* **Dashboard-as-Code:** The *Agricultural Platform* dashboard was deployed via a Kubernetes `ConfigMap`, ensuring the monitoring configuration is versioned and reproducible.
+* **Operational Readiness:** The "Welcome to Grafana" status confirms that the data sources (Prometheus and Loki) are successfully integrated and ready for real-time data visualization.
+
+
