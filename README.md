@@ -65,5 +65,16 @@ To better understand how these files interact within the cluster:
 * **Real-time Traffic Analysis:** The "Real-time System Load" time-series graph visualizes incoming HTTP request rates, allowing for immediate identification of traffic spikes or potential bottlenecks.
 * **Log Streaming (Scenario 5):** The "Application Logs" section provides a live feed of microservice activities. As shown in the view, it captures detailed HTTP status codes (e.g., 404 monitoring) and endpoint hits, which is essential for rapid debugging and security auditing.
 
+<img width="2547" height="535" alt="image" src="https://github.com/user-attachments/assets/3297eddc-973b-4c63-8a9c-57106f9d507a" />
 
+### **Integrated Observability Dashboard: Executive & Infrastructure View**
+
+> **Description:** This dashboard provides a comprehensive "single pane of glass" view into both the **Agricultural Platform's** business operations and the underlying Kubernetes infrastructure health. It integrates critical observability dimensions: real-time business metrics, granular application logs, and global resource utilization.
+
+**Key Monitoring Components:**
+
+* **Business Logic Tracking (Scenario 1):** The "Products Updated Daily" panel monitors the core functional output of the microservices, tracking successful transaction completions across the cluster.
+* **Real-time Traffic & System Load:** The "Real-time System Load" time-series graph visualizes incoming HTTP request rates, allowing for immediate identification of traffic spikes or potential bottlenecks.
+* **Log Streaming (Scenario 5):** The "Application Logs" section provides a live feed of microservice activities. It captures detailed HTTP status codes and endpoint hits, essential for rapid debugging and security auditing.
+* **Global Resource Infrastructure:** The "Kubernetes Resource Count" and "Global CPU/RAM Usage" panels provide a high-level overview of the cluster's health, displaying real-time consumption against defined requests and limits for all 26 running pods.
 
